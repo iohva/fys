@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="210.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.fys_tripperssmaven.controllers.NavigationDrawerController">
+    <stylesheets>
+        <URL value="@/styles/navigationdrawer.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="58.0" fitWidth="213.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/banner.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="homeButtonn" layoutY="66.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="50.0" prefWidth="210.0" styleClass="cursorPointer" text="Home" />
+      <Accordion fx:id="accordion" layoutY="117.0" prefHeight="152.0" prefWidth="210.0">
+         <panes>
+            <TitledPane fx:id="registerAccordion" animated="false" prefHeight="130.0" prefWidth="202.0" styleClass="cursorPointer" text="Registreren">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="79.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="addFoundLuggageButton" layoutX="3.0" layoutY="1.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="25.0" prefWidth="202.0" styleClass="cursorPointer" text="Gevonden bagage toevoegen" />
+                        <Button fx:id="addMissingLuggageButton" layoutX="3.0" layoutY="25.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="25.0" prefWidth="202.0" styleClass="cursorPointer" text="Vermiste bagage toevoegen" />
+                        <Button fx:id="addEmployeeButton" layoutX="3.0" layoutY="49.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="25.0" prefWidth="202.0" styleClass="cursorPointer" text="Medewerker toevoegen" />
+                        <Button fx:id="uploadExcelButton" layoutX="3.0" layoutY="75.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="25.0" prefWidth="202.0" styleClass="cursorPointer" text="Excel-bestand uploaden" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane fx:id="overviewAccordion" animated="false" prefHeight="137.0" prefWidth="200.0" styleClass="cursorPointer" text="Overzichten">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="addLostLuggageButton" layoutX="3.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="25.0" prefWidth="202.0" text="Overzicht vermiste bagage" />
+                        <Button fx:id="overviewFoundLuggageButton" layoutX="3.0" layoutY="24.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="25.0" prefWidth="202.0" styleClass="cursorPointer" text="Overzicht gevonden bagage" />
+                        <Button fx:id="overviewExcelButton" layoutX="3.0" layoutY="48.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="25.0" prefWidth="202.0" styleClass="cursorPointer" text="Overzicht Excel-bestanden" />
+                        <Button fx:id="overviewEmployeeButton" layoutX="3.0" layoutY="72.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="25.0" prefWidth="202.0" styleClass="cursorPointer" text="Overzicht medewerkers" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Button fx:id="statisticsButton" layoutY="269.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="50.0" prefWidth="210.0" styleClass="cursorPointer" text="Statistieken" />
+      <Button fx:id="helpButton" layoutY="320.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="50.0" prefWidth="210.0" styleClass="cursorPointer" text="Help" />
+      <Button fx:id="settingsButton" layoutY="371.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="50.0" prefWidth="210.0" styleClass="cursorPointer" text="Instellingen" />
+      <Button fx:id="logoutButton" layoutY="499.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="50.0" prefWidth="210.0" text="Uitloggen">
+         <styleClass>
+            <String fx:value="logoutButton" />
+            <String fx:value="cursorPointer" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

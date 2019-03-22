@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="1040.0" prefWidth="750.0" stylesheets="@../../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.fys_tripperssmaven.controllers.EditController_foundLuggage">
+   <children>
+      <ImageView fitHeight="39.0" fitWidth="30.0" layoutX="34.0" layoutY="13.0" onMouseClicked="#openOverviewFoundLuggage" pickOnBounds="true" preserveRatio="true" styleClass="button">
+         <image>
+            <Image url="@../../images/ic_arrow_left.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="64.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%edit_foundLuggage" textAlignment="CENTER" wrappingWidth="667.310546875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <AnchorPane fx:id="boxOne" layoutX="25.0" layoutY="84.0" prefHeight="194.0" prefWidth="700.0" stylesheets="@../../styles/Styles.css">
+         <children>
+            <Text layoutX="23.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%general" />
+            <Label alignment="CENTER_RIGHT" layoutX="196.0" layoutY="23.0" prefWidth="140.0" text="%date" />
+            <JFXDatePicker fx:id="datepkr_registerDate" defaultColor="#34bde6" layoutX="375.0" layoutY="19.0" onAction="#changed" promptText="%choose_date" styleClass="disabled" />
+            <Label alignment="CENTER_RIGHT" layoutX="196.0" layoutY="72.0" prefWidth="140.0" text="%time" />
+            <JFXTimePicker fx:id="timepkr_registerTime" defaultColor="#34bde6" editable="true" layoutX="375.0" layoutY="68.0" onAction="#changed" promptText="%choose_time" styleClass="disabled" />
+            <Label alignment="CENTER_RIGHT" layoutX="196.0" layoutY="118.0" prefWidth="140.0" text="%register_location" />
+            <JFXComboBox fx:id="comboBx_registerLocation" editable="true" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="114.0" onAction="#changed" prefWidth="171.0" promptText="%choose_airport" styleClass="disabled" />
+            <Label alignment="CENTER_RIGHT" layoutX="196.0" layoutY="159.0" prefWidth="140.0" text="%status" />
+            <JFXComboBox fx:id="comboBx_registerStatus" editable="true" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="155.0" onAction="#changed" prefWidth="171.0" styleClass="disabled" />
+         </children>
+      </AnchorPane>
+      <Separator layoutY="287.0" prefHeight="0.0" prefWidth="750.0" />
+      <AnchorPane fx:id="boxTwo" layoutX="25.0" layoutY="297.0" prefHeight="282.0" prefWidth="700.0">
+         <children>
+            <Text layoutX="14.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%luggageLabel_and_travellerInformation" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="22.0" prefWidth="140.0" text="%labelNumber" />
+            <JFXTextField fx:id="txtField_labelNumber" focusColor="#34bde6" labelFloat="true" layoutX="376.0" layoutY="18.0" onKeyTyped="#changed" prefHeight="25.0" prefWidth="180.0" styleClass="disabled" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="67.0" prefWidth="140.0" text="%flightNumber" />
+            <JFXTextField fx:id="txtField_flightNumber" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="63.0" onKeyTyped="#changed" prefHeight="25.0" prefWidth="180.0" styleClass="disabled" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="112.0" prefWidth="140.0" text="%destination" />
+            <JFXComboBox fx:id="comboBx_destination" editable="true" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="109.0" onAction="#changed" prefHeight="25.0" prefWidth="180.0" promptText="%choose_destination" styleClass="disabled" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="155.0" prefHeight="17.0" prefWidth="140.0" text="%firstname_traveller" />
+            <JFXTextField fx:id="txtField_firstname" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="151.0" onKeyTyped="#changed" prefHeight="25.0" prefWidth="180.0" styleClass="disabled" />
+            <Label alignment="CENTER_RIGHT" layoutX="196.0" layoutY="201.0" prefHeight="17.0" prefWidth="140.0" text="%infix_traveller" />
+            <JFXTextField fx:id="txtField_infix" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="197.0" onKeyTyped="#changed" prefHeight="25.0" prefWidth="180.0" styleClass="disabled" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="247.0" prefHeight="17.0" prefWidth="140.0" text="%lastname_traveller" />
+            <JFXTextField fx:id="txtField_lastname" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="243.0" onKeyTyped="#changed" prefHeight="25.0" prefWidth="180.0" styleClass="disabled" />
+         </children>
+      </AnchorPane>
+      <Separator layoutY="585.0" prefHeight="0.0" prefWidth="750.0" />
+      <AnchorPane fx:id="boxThree" layoutX="24.0" layoutY="602.0" prefHeight="324.0" prefWidth="700.0">
+         <children>
+            <Text layoutX="14.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%luggageLabelInformation" />
+            <Label alignment="CENTER_RIGHT" layoutX="153.0" layoutY="43.0" prefWidth="140.0" text="%type" />
+            <JFXComboBox fx:id="comboBx_typeLuggage" editable="true" focusColor="#34bde6" labelFloat="true" layoutX="331.0" layoutY="39.0" onAction="#changed" prefWidth="171.0" promptText="%choose_type" styleClass="disabled" />
+            <Label alignment="CENTER_RIGHT" layoutX="153.0" layoutY="88.0" prefWidth="140.0" text="%brand" />
+            <JFXComboBox fx:id="comboBx_brandLuggage" editable="true" focusColor="#34bde6" labelFloat="true" layoutX="331.0" layoutY="84.0" onAction="#changed" prefWidth="171.0" promptText="%choose_brand" styleClass="disabled" />
+            <JFXTextField fx:id="txtField_otherBrand" focusColor="#34bde6" labelFloat="true" layoutX="520.0" layoutY="84.0" visible="false" />
+            <Label alignment="CENTER_RIGHT" layoutX="153.0" layoutY="133.0" prefWidth="140.0" text="%color" />
+            <JFXComboBox fx:id="comboBx_colorLuggage" editable="true" focusColor="#34bde6" labelFloat="true" layoutX="331.0" layoutY="129.0" onAction="#changed" prefWidth="171.0" promptText="%choose_color" styleClass="disabled" />
+            <JFXTextField fx:id="txtField_otherColor" focusColor="#34bde6" labelFloat="true" layoutX="524.0" layoutY="129.0" visible="false" />
+            <Label alignment="CENTER_RIGHT" layoutX="153.0" layoutY="184.0" prefHeight="17.0" prefWidth="140.0" text="%characters" />
+            <JFXTextArea fx:id="txtArea_charactersLugagge" focusColor="#34bde6" labelFloat="true" layoutX="331.0" layoutY="184.0" onKeyTyped="#changed" prefHeight="115.0" prefWidth="215.0" promptText="%choose_characters" styleClass="disabled" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btn_submit" buttonType="RAISED" disable="true" layoutX="64.0" layoutY="954.0" onAction="#sendToDatabase" prefHeight="65.0" prefWidth="620.0" ripplerFill="#eb2629" text="%edit" />
+   </children>
+   <stylesheets>
+      <URL value="@../../styles/validation.css" />
+      <URL value="@../../styles/Styles.css" />
+   </stylesheets>
+</AnchorPane>

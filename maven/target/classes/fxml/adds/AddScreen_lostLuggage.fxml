@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="1350.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fys_tripperssmaven.controllers.AddController_lostLuggage">
+   <children>
+      <AnchorPane fx:id="boxOne" layoutX="5.0" layoutY="10.0" prefHeight="200.0" prefWidth="750.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="196.0" layoutY="30.0" prefWidth="140.0" text="%date" />
+            <JFXDatePicker fx:id="datePkr" defaultColor="#34bde6" layoutX="375.0" layoutY="26.0" promptText="%choose_date" />
+            <Label alignment="CENTER_RIGHT" layoutX="196.0" layoutY="90.0" prefWidth="140.0" text="%time" />
+            <JFXTimePicker fx:id="timePkr" defaultColor="#34bde6" layoutX="375.0" layoutY="86.0" promptText="%choose_time" />
+            <Label alignment="CENTER_RIGHT" layoutX="196.0" layoutY="150.0" prefWidth="140.0" text="%airport" />
+            <JFXComboBox fx:id="comboBx_airport" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="146.0" prefWidth="171.0" promptText="%choose_airport" />
+            <Text layoutX="14.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%general" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="10.0" layoutY="210.0" prefHeight="0.0" prefWidth="750.0" />
+      <AnchorPane fx:id="boxTwo" layoutX="5.0" layoutY="218.0" prefHeight="482.0" prefWidth="750.0">
+         <children>
+            <Text layoutX="14.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%travellerInformation" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="24.0" prefWidth="140.0" text="%firstname" />
+            <JFXTextField fx:id="txtField_firstname" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="20.0" prefHeight="25.0" prefWidth="180.0" styleClass="only_letter" />
+            <Label alignment="CENTER_RIGHT" layoutX="196.0" layoutY="72.0" prefWidth="140.0" text="%infix" />
+            <JFXTextField fx:id="txtField_infix" focusColor="#34bde6" labelFloat="true" layoutX="374.0" layoutY="68.0" prefHeight="25.0" prefWidth="180.0" styleClass="only_letter" />
+            <Label alignment="CENTER_RIGHT" layoutX="195.0" layoutY="124.0" prefWidth="140.0" text="%lastname" />
+            <JFXTextField fx:id="txtField_lastname" focusColor="#34bde6" labelFloat="true" layoutX="373.0" layoutY="120.0" prefHeight="25.0" prefWidth="180.0" styleClass="only_letter" />
+            <Label alignment="CENTER_RIGHT" layoutX="195.0" layoutY="173.0" prefWidth="140.0" text="%dateOfBirth" />
+            <JFXDatePicker fx:id="datePkr_birth" defaultColor="#34bde6" layoutX="373.0" layoutY="169.0" prefHeight="25.0" prefWidth="180.0" promptText="%choose_dateOfBirth" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="220.0" prefWidth="140.0" text="%address" />
+            <JFXTextField fx:id="txtField_address" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="216.0" prefHeight="25.0" prefWidth="180.0" styleClass="only_letter_number" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="265.0" prefWidth="140.0" text="%place" />
+            <JFXTextField fx:id="txtField_place" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="261.0" prefHeight="25.0" prefWidth="180.0" styleClass="only_letter" />
+            <Label alignment="CENTER_RIGHT" layoutX="200.0" layoutY="314.0" prefWidth="140.0" text="%zipcode" />
+            <JFXTextField fx:id="txtField_zipcode" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="310.0" prefHeight="25.0" prefWidth="180.0" styleClass="only_letter_number" />
+            <Label alignment="CENTER_RIGHT" layoutX="200.0" layoutY="359.0" prefWidth="140.0" text="%country" />
+            <JFXTextField fx:id="txtField_country" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="355.0" prefHeight="25.0" prefWidth="180.0" styleClass="only_letter" />
+            <Label alignment="CENTER_RIGHT" layoutX="202.0" layoutY="403.0" prefWidth="140.0" text="%phoneNumber" />
+            <JFXTextField fx:id="txtField_phoneNumber" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="399.0" prefHeight="25.0" prefWidth="180.0" styleClass="only_number" />
+            <Label alignment="CENTER_RIGHT" layoutX="202.0" layoutY="449.0" prefWidth="140.0" text="%email" />
+            <JFXTextField fx:id="txtField_email" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="445.0" prefHeight="25.0" prefWidth="180.0" styleClass="only_email" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="4.0" layoutY="707.0" prefHeight="0.0" prefWidth="750.0" />
+      <AnchorPane fx:id="boxThree" layoutX="5.0" layoutY="706.0" prefHeight="200.0" prefWidth="750.0">
+         <children>
+            <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%luggageLabelInformation" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="63.0" prefWidth="140.0" text="%labelNumber" />
+            <JFXTextField fx:id="txtField_labelNumber" focusColor="#34bde6" labelFloat="true" layoutX="378.0" layoutY="59.0" prefHeight="25.0" prefWidth="180.0" styleClass="only_letter_number" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="108.0" prefWidth="140.0" text="%flightNumber" />
+            <JFXTextField fx:id="txtField_flightNumber" focusColor="#34bde6" labelFloat="true" layoutX="378.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" styleClass="only_letter_number" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="153.0" prefWidth="140.0" text="%destination" />
+            <JFXComboBox fx:id="comboBx_destination" focusColor="#34bde6" labelFloat="true" layoutX="378.0" layoutY="149.0" prefHeight="25.0" prefWidth="180.0" promptText="%choose_destination" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="6.0" layoutY="913.0" prefHeight="0.0" prefWidth="750.0" />
+      <AnchorPane fx:id="boxFour" layoutX="5.0" layoutY="931.0" prefHeight="324.0" prefWidth="750.0">
+         <children>
+            <Text layoutX="14.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%luggageInformation" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="43.0" prefWidth="140.0" text="%type" />
+            <JFXComboBox fx:id="comboBx_typeLuggage" focusColor="#34bde6" labelFloat="true" layoutX="378.0" layoutY="39.0" prefWidth="171.0" promptText="%choose_type" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="88.0" prefWidth="140.0" text="%brand" />
+            <JFXComboBox fx:id="comboBx_brandLuggage" focusColor="#34bde6" labelFloat="true" layoutX="378.0" layoutY="84.0" prefWidth="171.0" promptText="%choose_brand" />
+            <JFXTextField fx:id="txtField_otherBrand" focusColor="#34bde6" labelFloat="true" layoutX="575.0" layoutY="84.0" visible="false" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="133.0" prefWidth="140.0" text="%color" />
+            <JFXComboBox fx:id="comboBx_colorLuggage" focusColor="#34bde6" labelFloat="true" layoutX="378.0" layoutY="129.0" prefWidth="171.0" promptText="%choose_color" />
+            <JFXTextField fx:id="txtField_otherColor" focusColor="#34bde6" labelFloat="true" layoutX="575.0" layoutY="129.0" visible="false" />
+            <Label alignment="CENTER_RIGHT" layoutX="197.0" layoutY="179.0" prefHeight="17.0" prefWidth="140.0" text="%characters" />
+            <JFXTextArea fx:id="txtArea_charactersLugagge" focusColor="#34bde6" labelFloat="true" layoutX="375.0" layoutY="187.0" prefHeight="115.0" prefWidth="215.0" promptText="%choose_characters" styleClass="only_letter_number" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btn_submit" buttonType="RAISED" layoutX="73.0" layoutY="1271.0" onAction="#sendToDatabase" prefHeight="65.0" prefWidth="620.0" ripplerFill="#eb2629" text="%add" />
+   </children>
+   <stylesheets>
+      <URL value="@../../styles/validation.css" />
+      <URL value="@../../styles/Styles.css" />
+   </stylesheets>
+</AnchorPane>

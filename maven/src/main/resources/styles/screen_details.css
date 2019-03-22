@@ -1,0 +1,19 @@
+
+.border{
+   -fx-border-color: black;
+   -fx-border-width: 2px;
+}
+
+.labelTitle{
+    
+}
+
+.label{
+    -fx-width: 215px;
+    -fx-height: 25px;
+    -fx-font-size: 15px;
+}
+
+.text{
+    -fx-font-size: 18px;
+}

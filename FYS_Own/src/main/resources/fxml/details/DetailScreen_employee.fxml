@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="750.0" stylesheets="@../../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.fys_tripperssmaven.controllers.DetailController_employee">
+   <children>
+      <ImageView fitHeight="39.0" fitWidth="30.0" layoutX="54.0" layoutY="57.0" onMouseClicked="#openOverviewUsers" pickOnBounds="true" preserveRatio="true" styleClass="button">
+         <image>
+            <Image url="@../../images/ic_arrow_left.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="87.0" layoutY="53.0" prefHeight="38.0" prefWidth="567.0" text="%employee_information">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="92.0" layoutY="121.0" prefHeight="327.0" prefWidth="567.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="118.0" layoutY="46.0" prefHeight="17.0" prefWidth="160.0" text="%fullname" />
+            <Text fx:id="txt_name" layoutX="325.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Label alignment="CENTER_RIGHT" layoutX="118.0" layoutY="79.0" prefHeight="17.0" prefWidth="160.0" text="%dateOfBirth" />
+            <Text fx:id="txt_dateOfBirth" layoutX="325.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Label alignment="CENTER_RIGHT" layoutX="118.0" layoutY="111.0" prefWidth="160.0" text="%phoneNumber" />
+            <Text fx:id="txt_phoneNumber" layoutX="325.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Label alignment="CENTER_RIGHT" layoutX="118.0" layoutY="147.0" prefWidth="160.0" text="%email" />
+            <Text fx:id="txt_email" layoutX="325.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Label alignment="CENTER_RIGHT" layoutX="118.0" layoutY="181.0" prefWidth="160.0" text="%role" />
+            <Text fx:id="txt_role" layoutX="325.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Label alignment="CENTER_RIGHT" layoutX="118.0" layoutY="217.0" prefWidth="160.0" text="%username" />
+            <Text fx:id="txt_username" layoutX="325.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="******" />
+            <Label alignment="CENTER_RIGHT" layoutX="118.0" layoutY="246.0" prefWidth="160.0" text="%password" />
+            <Text layoutX="325.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="********" />
+         </children>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="228.0" layoutY="477.0" mnemonicParsing="false" onAction="#openEditUser" prefHeight="31.0" prefWidth="296.0" ripplerFill="#57c357" text="%edit" />
+   </children>
+</AnchorPane>

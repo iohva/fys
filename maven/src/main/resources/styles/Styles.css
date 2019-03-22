@@ -1,0 +1,49 @@
+.button {
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.scrollPane{
+    -fx-focus-color:  transparent;
+    -fx-faint-focus-color:  transparent;
+    -fx-background-color: transparent;
+}
+
+.cursorPointer{
+    -fx-cursor: hand;
+}
+
+.selected{
+    -fx-padding: 10px;
+    -fx-border-color: #34bde6;
+    -fx-border-width: 10px;
+}
+
+.jfx-slider .thumb{
+   -fx-background-color: #eb2629;
+}
+
+.submitButton{
+    -fx-width: 620px;
+    -fx-height: 65px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.disabled{
+    -fx-opacity: 0.5;
+}
+
+.disabled:focused{
+    -fx-opacity: 1;
+}
+
+.uploadBox{
+    -fx-border-color: blue ;
+    -fx-border-width: 5 ; 
+    -fx-border-style: segments(10, 15, 15, 15)  line-cap round ;
+}
+
+.highlight{
+    -fx-background-color: lightblue;
+}

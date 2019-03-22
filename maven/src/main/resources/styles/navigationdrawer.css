@@ -1,0 +1,21 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.noArrow > .arrow-button > .arrow{
+    -fx-background-color: transparent;
+}
+
+.logoutButton{
+    -fx-background-color: #d75b5b;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.logoutButton:hover{
+    -fx-background-color: #eb8181;
+}

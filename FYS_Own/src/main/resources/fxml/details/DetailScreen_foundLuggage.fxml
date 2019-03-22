@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="1435.0" prefWidth="750.0" stylesheets="@../../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.fys_tripperssmaven.controllers.DetailController_foundLuggage">
+   <children>
+      <Pane fx:id="header" layoutY="14.0" prefHeight="78.0" prefWidth="750.0">
+         <children>
+            <Text fx:id="title" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%details_foundLuggage" textAlignment="CENTER" wrappingWidth="750.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="39.0" fitWidth="30.0" layoutX="42.0" layoutY="13.0" onMouseClicked="#openOverviewLostLuggage" pickOnBounds="true" preserveRatio="true" styleClass="button">
+               <image>
+                  <Image url="@../../images/ic_arrow_left.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="boxOne" layoutY="92.0" prefHeight="187.0" prefWidth="750.0">
+         <children>
+            <Pane layoutX="43.0" layoutY="12.0" prefHeight="163.0" prefWidth="664.0" styleClass="border" stylesheets="@../../styles/screen_details.css">
+               <children>
+                  <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="labelTitle" text="%general" />
+                  <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="30.0" prefHeight="17.0" prefWidth="150.0" text="%date" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_registerDate" layoutX="358.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[Date]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="66.0" prefHeight="17.0" prefWidth="150.0" text="%time" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_registerTime" layoutX="358.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[Time]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="141.0" layoutY="103.0" prefHeight="30.0" prefWidth="170.0" text="%register_location" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_registerLocation" layoutX="358.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[Airport]" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="boxTwo" layoutY="279.0" prefHeight="489.0" prefWidth="750.0">
+         <children>
+            <Pane layoutX="43.0" layoutY="3.0" prefHeight="480.0" prefWidth="664.0" styleClass="border" stylesheets="@../../styles/screen_details.css">
+               <children>
+                  <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="labelTitle" text="%travellerInformation" />
+                  <Label alignment="CENTER_RIGHT" layoutX="163.0" layoutY="41.0" prefHeight="17.0" prefWidth="150.0" text="%fullname" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_fullName" layoutX="360.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[Fullname]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="163.0" layoutY="96.0" prefHeight="17.0" prefWidth="150.0" text="%dateOfBirth" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_dateOfBirth" layoutX="360.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[DateOfBirth]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="163.0" layoutY="149.0" prefHeight="17.0" prefWidth="150.0" text="%address" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_address" layoutX="360.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[Address]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="164.0" layoutY="202.0" prefWidth="150.0" text="%place" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_place" layoutX="360.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[Place]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="163.0" layoutY="252.0" prefWidth="150.0" text="%zipcode" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_zipcode" layoutX="359.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[Zipcode]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="164.0" layoutY="300.0" prefWidth="150.0" text="%country" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_country" layoutX="360.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[Country]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="164.0" layoutY="356.0" prefWidth="150.0" text="%phoneNumber" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_phoneNumber" layoutX="360.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[PhoneNumber]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="164.0" layoutY="410.0" prefWidth="150.0" text="%email" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_email" layoutX="360.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[Email]" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="boxThree" layoutY="788.0" prefHeight="246.0" prefWidth="750.0">
+         <children>
+            <Pane layoutX="43.0" layoutY="12.0" prefHeight="218.0" prefWidth="664.0" styleClass="border" stylesheets="@../../styles/screen_details.css">
+               <children>
+                  <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="labelTitle" text="%luggageLabelInformation" />
+                  <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="42.0" prefHeight="17.0" prefWidth="150.0" text="%labelNumber" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_labelNumber" layoutX="357.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[LabelNumber]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="93.0" prefHeight="17.0" prefWidth="150.0" text="%flightNumber" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_flightNumber" layoutX="357.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[FlightNumber]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="161.0" layoutY="146.0" prefWidth="150.0" text="%destination" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_destination" layoutX="357.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[Destination]" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="boxFour" layoutY="1038.0" prefHeight="298.0" prefWidth="750.0">
+         <children>
+            <Pane layoutX="43.0" layoutY="12.0" prefHeight="269.0" prefWidth="664.0" styleClass="border" stylesheets="@../../styles/screen_details.css">
+               <children>
+                  <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="labelTitle" text="%luggageInformation" />
+                  <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="42.0" prefHeight="17.0" prefWidth="150.0" text="%type" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_luggageType" layoutX="357.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[LuggageType]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="93.0" prefHeight="17.0" prefWidth="150.0" text="%brand" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_luggageBrand" layoutX="357.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[LuggageBrand]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="161.0" layoutY="146.0" prefWidth="150.0" text="%color" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_luggageColor" layoutX="357.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[LuggageColor]" />
+                  <Label alignment="CENTER_RIGHT" layoutX="96.0" layoutY="198.0" prefHeight="30.0" prefWidth="215.0" text="%characters" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txt_luggageCharacters" layoutX="357.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="[LuggageCharacters]" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btn_edit" buttonType="RAISED" layoutX="65.0" layoutY="1350.0" onAction="#openEditLostLuggage" prefHeight="65.0" prefWidth="620.0" ripplerFill="#eb2629" text="%edit" />
+   </children>
+</AnchorPane>

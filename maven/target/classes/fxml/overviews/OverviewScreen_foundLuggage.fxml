@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fys_tripperssmaven.controllers.OverviewController_foundLuggage">
+   <children>
+      <Pane layoutY="2.0" prefHeight="155.0" prefWidth="1153.0">
+         <children>
+            <JFXRadioButton fx:id="radiobtn_showAll" layoutX="47.0" layoutY="85.0" onAction="#loadData" prefHeight="17.0" prefWidth="175.0" selected="true" text="%all_foundLuggage">
+               <toggleGroup>
+                  <ToggleGroup fx:id="whichResult" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="radiobtn_showMine" layoutX="47.0" layoutY="119.0" onAction="#loadData" prefHeight="17.0" prefWidth="251.0" text="%my_foundLuggage" toggleGroup="$whichResult" />
+            <Label alignment="CENTER" layoutY="21.0" prefHeight="30.0" prefWidth="1200.0" text="%overview_foundLuggage">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <FlowPane layoutX="20.0" layoutY="170.0" prefHeight="320.0" prefWidth="855.0">
+         <children>
+            <TableView fx:id="table_foundLuggage" prefHeight="319.0" prefWidth="1150.0">
+              <columns>
+                <TableColumn fx:id="column_id" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="column_date" prefWidth="120.0" text="%date" />
+                  <TableColumn fx:id="column_airport" prefWidth="140.0" text="%airport" />
+                  <TableColumn fx:id="column_nameTraveller" prefWidth="194.0" text="%fullname_owner" />
+                  <TableColumn fx:id="column_labelNumber" prefWidth="169.0" text="%labelNumber" />
+                  <TableColumn fx:id="column_typeLuggage" prefWidth="151.0" text="%type" />
+                  <TableColumn fx:id="column_detailLuggage" prefWidth="151.0" text="%details" />
+                  <TableColumn fx:id="column_editLuggage" prefWidth="151.0" text="%edit" />
+              </columns>
+            </TableView>
+         </children>
+      </FlowPane>
+      <JFXButton fx:id="btn_addFoundLuggage" buttonType="RAISED" layoutX="422.0" layoutY="512.0" onAction="#openAddFoundLuggagePage" prefHeight="50.0" prefWidth="350.0" ripplerFill="#34bde6" text="%add_new_foundLuggage" />
+   </children>
+</AnchorPane>

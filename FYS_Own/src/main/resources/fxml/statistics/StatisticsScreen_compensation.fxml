@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="965.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.fys_tripperssmaven.controllers.StatisticsController_compensation">
+   <children>
+      <Label alignment="CENTER" layoutY="14.0" prefHeight="51.0" prefWidth="965.0" text="%statistics_compensation">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="pieChart" layoutX="272.0" layoutY="87.0" prefHeight="428.0" prefWidth="569.0" visible="false" />
+      <LineChart fx:id="lineChart" layoutX="232.0" layoutY="135.0" prefHeight="380.0" prefWidth="700.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <Pane fx:id="leftPane" prefHeight="560.0" prefWidth="200.0">
+         <children>
+            <JFXRadioButton fx:id="radiobtn_lineChart" layoutX="20.0" layoutY="421.0" onAction="#showChart" selected="true" text="%lineChart">
+               <toggleGroup>
+                  <ToggleGroup fx:id="whichDiagram" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="radiobtn_pieChart" layoutX="20.0" layoutY="452.0" onAction="#showChart" text="%pieChart" toggleGroup="$whichDiagram" />
+            <Label layoutX="20.0" layoutY="392.0" text="%display" />
+            <Pane layoutX="13.0" layoutY="71.0" prefHeight="306.0" prefWidth="175.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="7.0" layoutY="28.0" text="%data_each">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="comboBx_timeDisplay" focusColor="#34bde6" labelFloat="true" layoutX="26.0" layoutY="45.0" prefHeight="25.0" prefWidth="123.0" promptText="..." />
+                  <Label layoutX="7.0" layoutY="91.0" text="%from">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <JFXDatePicker fx:id="datePkr_start" defaultColor="#34bde6" layoutX="26.0" layoutY="121.0" prefHeight="25.0" prefWidth="133.0" promptText="%choose_startDate" />
+                  <Label layoutX="11.0" layoutY="179.0" text="%till">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <JFXDatePicker fx:id="datePkr_end" defaultColor="#34bde6" layoutX="26.0" layoutY="202.0" prefHeight="25.0" prefWidth="133.0" promptText="%choose_endDate" />
+                  <JFXButton fx:id="btn_filterDisplay" buttonType="RAISED" layoutX="45.0" layoutY="260.0" onAction="#filterDisplay" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #34bde6;" text="%filter" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

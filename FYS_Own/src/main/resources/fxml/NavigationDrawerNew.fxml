@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="210.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fys_tripperssmaven.controllers.NavigationDrawerController">
+    <stylesheets>
+        <URL value="@/styles/navigationdrawer.css" />
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <GridPane layoutY="3.0" prefHeight="550.0" prefWidth="210.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="210.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="0.0" prefWidth="0.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="293.0" minHeight="10.0" prefHeight="288.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="353.0" minHeight="10.0" prefHeight="190.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+             <ImageView fx:id="homeLogoButton" fitHeight="58.0" fitWidth="213.0" onMouseClicked="#bannerClick" pickOnBounds="true" preserveRatio="true" styleClass="cursorPointer">
+               <image>
+                  <Image url="@../images/banner.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets bottom="3.0" />
+               </GridPane.margin>
+            </ImageView>
+            <VBox prefHeight="290.0" prefWidth="196.0" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#initButtons" prefHeight="26.0" prefWidth="211.0" style="-fx-alignment: center-left;" text="Home" />
+                  <MenuButton fx:id="lostLuggageButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="260.0" styleClass="button" text="%lostLuggage">
+                     <items>
+                        <MenuItem fx:id="overviewLostLuggageButton" mnemonicParsing="false" onAction="#initButtons" text="%overview_lostLuggage" />
+                        <MenuItem fx:id="addLostLuggageButton" mnemonicParsing="false" onAction="#initButtons" text="%add_lostLuggage" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton fx:id="foundLuggageButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="240.0" styleClass="button" text="%foundLuggage">
+                     <items>
+                        <MenuItem fx:id="overviewFoundLuggageButton" mnemonicParsing="false" onAction="#initButtons" text="%overview_foundLuggage" />
+                        <MenuItem fx:id="addFoundLuggageButton" mnemonicParsing="false" onAction="#initButtons" text="%add_foundLuggage" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton fx:id="excelButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="235.0" styleClass="button" text="%excelFiles">
+                     <items>
+                        <MenuItem fx:id="overviewExcelButton" mnemonicParsing="false" onAction="#initButtons" text="%overview_excelFiles" />
+                        <MenuItem fx:id="importExcelButton" mnemonicParsing="false" onAction="#initButtons" text="%import_excelFiles" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton fx:id="employeeButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="235.0" styleClass="button" text="%employees">
+                    <items>
+                        <MenuItem fx:id="overviewEmployeeButton" mnemonicParsing="false" onAction="#initButtons" text="%overview_employees" />
+                        <MenuItem fx:id="addEmployeeButton" mnemonicParsing="false" onAction="#initButtons" text="%add_employees" />
+                    </items>
+                  </MenuButton>
+                  <MenuButton fx:id="statisticsAdmin" mnemonicParsing="false" onAction="#initButtons" prefHeight="26.0" prefWidth="217.0" styleClass="button" text="%statistics">
+                     <items>
+                        <MenuItem fx:id="statisticsAdminService" mnemonicParsing="false" onAction="#initButtons" text="%statistics_service" />
+                        <MenuItem fx:id="statisticsAdminCom" mnemonicParsing="false" onAction="#initButtons" text="%statistics_compensation" />
+                     </items>
+                  </MenuButton>
+                  <Button fx:id="statisticsService" mnemonicParsing="false" onAction="#initButtons" prefHeight="26.0" prefWidth="211.0" style="-fx-alignment: center-left;" text="%statistics" />
+                  <Button fx:id="statisticsCompensation" mnemonicParsing="false" onAction="#initButtons" prefHeight="26.0" prefWidth="211.0" style="-fx-alignment: center-left;" text="%statistics" />
+                  <MenuButton fx:id="helpButton" mnemonicParsing="false" onAction="#initButtons" prefHeight="26.0" prefWidth="235.0" styleClass="button" text="%help">
+                     <items>
+                        <MenuItem fx:id="helpManualButton" mnemonicParsing="false" onAction="#initButtons" text="%help_pdf" />
+                     </items>
+                  </MenuButton>
+                  <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#initButtons" prefHeight="26.0" prefWidth="211.0" style="-fx-alignment: center-left;" text="%settings" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+      <Button fx:id="logoutButton" layoutY="510.0" mnemonicParsing="false" onAction="#initButtons" prefHeight="50.0" prefWidth="210.0" text="%logout">
+         <styleClass>
+            <String fx:value="logoutButton" />
+            <String fx:value="button" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

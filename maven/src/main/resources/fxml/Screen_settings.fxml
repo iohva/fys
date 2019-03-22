@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="755.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fys_tripperssmaven.controllers.Controller_settings">
+   <children>
+      <Pane fx:id="boxOne" prefHeight="200.0" prefWidth="750.0">
+         <children>
+            <Label layoutX="16.0" layoutY="14.0" text="%edit_language">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <VBox fx:id="flagBox_nl" alignment="CENTER" layoutX="49.0" layoutY="51.0" prefHeight="140.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="flag_nl" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#flagClick" pickOnBounds="true" preserveRatio="true" styleClass="cursorPointer">
+                     <image>
+                        <Image url="@../images/flag_nl.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="%dutch" />
+               </children>
+            </VBox>
+            <VBox fx:id="flagBox_en" alignment="CENTER" layoutX="186.0" layoutY="51.0" prefHeight="140.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="flag_en" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#flagClick" pickOnBounds="true" preserveRatio="true" styleClass="cursorPointer">
+                     <image>
+                        <Image url="@../images/flag_en.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="%english" />
+               </children>
+            </VBox>
+            <VBox fx:id="flagBox_de" alignment="CENTER" layoutX="325.0" layoutY="51.0" prefHeight="140.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="flag_de" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#flagClick" pickOnBounds="true" preserveRatio="true" styleClass="cursorPointer">
+                     <image>
+                        <Image url="@../images/flag_de.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="%german" />
+               </children>
+            </VBox>
+            <VBox fx:id="flagBox_fr" alignment="CENTER" layoutX="462.0" layoutY="51.0" prefHeight="140.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="flag_fr" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#flagClick" pickOnBounds="true" preserveRatio="true" styleClass="cursorPointer">
+                     <image>
+                        <Image url="@../images/flag_fr.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="%french" />
+               </children>
+            </VBox>
+            <VBox fx:id="flagBox_tr" alignment="CENTER" layoutX="605.0" layoutY="51.0" prefHeight="140.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="flag_tr" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#flagClick" pickOnBounds="true" preserveRatio="true" styleClass="cursorPointer">
+                     <image>
+                        <Image url="@../images/flag_tr.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="%turkish" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Separator layoutY="205.0" prefHeight="10.0" prefWidth="750.0" />
+      <Pane fx:id="boxTwo" layoutY="215.0" prefHeight="139.0" prefWidth="750.0">
+         <children>
+            <Label layoutX="14.0" layoutY="8.0" text="%edit_fontSize">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXSlider fx:id="slider_textSize" layoutX="155.0" layoutY="75.0" max="0.0" onMouseClicked="#sliderClick" onMouseDragged="#sliderClick" prefHeight="15.0" prefWidth="440.0" />
+            <Label fx:id="label_minTextSize" layoutX="112.0" layoutY="65.0" text="0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_maxTextSize" layoutX="624.0" layoutY="65.0" text="0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_curTextSize" layoutX="370.0" layoutY="97.0" text="0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Separator layoutY="357.0" prefHeight="10.0" prefWidth="750.0" />
+      <Pane fx:id="boxThree" layoutY="367.0" prefHeight="124.0" prefWidth="750.0">
+         <children>
+            <Label layoutX="14.0" layoutY="11.0" text="%edit_timeType">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXRadioButton fx:id="radiobtn_twelveHour" layoutX="228.0" layoutY="62.0" onAction="#radioButtonClick" text="%twelve_hour">
+               <toggleGroup>
+                  <ToggleGroup fx:id="whichTimeFormat" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="radiobtn_twentyFourHour" layoutX="449.0" layoutY="62.0" onAction="#radioButtonClick" text="%twentyFour_hour" toggleGroup="$whichTimeFormat" />
+         </children>
+      </Pane>
+      <Separator layoutX="5.0" layoutY="493.0" prefHeight="10.0" prefWidth="750.0" />
+      <Pane fx:id="boxFour" layoutY="500.0" prefHeight="124.0" prefWidth="750.0">
+         <children>
+            <Label layoutX="14.0" layoutY="11.0" text="%edit_excelAmount">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="spinner_excelAmount" editable="true" layoutX="253.0" layoutY="62.0" prefHeight="25.0" prefWidth="244.0" />
+         </children>
+      </Pane>
+      <JFXButton fx:id="btn_save" buttonType="RAISED" disable="true" layoutX="7.0" layoutY="677.0" onAction="#saveSettings" prefHeight="65.0" prefWidth="740.0" ripplerFill="#6aa84f" text="%save" />
+   </children>
+</AnchorPane>

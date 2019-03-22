@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fys_tripperssmaven.controllers.AddController_employee">
+   <children>
+      <ImageView fitHeight="238.0" fitWidth="207.0" layoutX="58.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="302.0" layoutY="69.0" text="%add_employee">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="285.0" layoutY="140.0" text="%firstname">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstName" layoutX="285.0" layoutY="160.0" promptText="%plc_firstname" />
+      <Label layoutX="285.0" layoutY="190.0" text="%email">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailAddress" layoutX="285.0" layoutY="210.0" promptText="e-mail@email.com" />
+      <Label layoutX="285.0" layoutY="240.0" text="%phoneNumber">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phoneNmbr" layoutX="285.0" layoutY="260.0" promptText="+31xxxxxxxxx" />
+      <Label layoutX="285.0" layoutY="290.0" text="%dateOfBirth">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dateOfBirth" layoutX="285.0" layoutY="310.0" promptText="DD/MM/JJJJ" />
+      <Label layoutX="485.0" layoutY="140.0" text="%lastname">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="485.0" layoutY="240.0" text="%username">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="485.0" layoutY="290.0" text="%password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lastName" layoutX="485.0" layoutY="160.0" promptText="%plc_lastname" />
+      <TextField fx:id="usernameRegister" layoutX="485.0" layoutY="260.0" />
+      <Label layoutX="485.0" layoutY="340.0" text="%repeat_password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="newPassword" layoutX="485.0" layoutY="310.0" />
+      <PasswordField fx:id="repeatPassword" layoutX="485.0" layoutY="360.0" />
+      <Button fx:id="createAccount" layoutX="485.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleCreateAccount" prefHeight="27.0" prefWidth="167.0" text="%register" />
+      <Label layoutX="285.0" layoutY="340.0" text="%role">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="accountRole" layoutX="285.0" layoutY="360.0" prefHeight="27.0" prefWidth="167.0" />
+      <Label layoutX="485.0" layoutY="190.0" text="%infix">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="infix" layoutX="485.0" layoutY="210.0" promptText="%plc_infix" />
+   </children>
+</AnchorPane>
